@@ -21,29 +21,29 @@ const loginFormHandler = async (event) => {
       }
     }
   };
-  
+
   const signupFormHandler = async (event) => {
-    event.preventDefault();
-  
-    
-    const email = document.querySelector('#email-create').value.trim();
-    const password = document.querySelector('#password-create').value.trim();
-  
-    if (email && password) {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-        alert('You have sucessfully signed up! Please sign in')
-      } else {
-        alert('Failed to sign up.');
-      }
+  event.preventDefault();
+
+  const email = document.querySelector('#email-create').value.trim();
+  const password = document.querySelector('#password-create').value.trim();
+
+  if (email && password) {
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to sign up.');
     }
-  };
+  }
+};
+  
+  
   
   document
     .querySelector('.login-form')
@@ -53,5 +53,6 @@ const loginFormHandler = async (event) => {
     .querySelector('.create-form')
     .addEventListener('submit', signupFormHandler);
   
+
 
   
