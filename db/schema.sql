@@ -12,4 +12,3 @@ CREATE TABLE users (
   password VARCHAR(100) NOT NULL
 );
 
-INSERT INTO users (id, email, password)
