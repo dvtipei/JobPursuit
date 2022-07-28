@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// CREATE new user
+
 router.post('/', async (req, res) => {
     try {
       const userData = await User.create({
@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
 
 router.post('/login', async (req, res) => {
 try {
@@ -54,6 +55,7 @@ try {
     res.status(400).json(err);
 }
 });
+
 
 router.post('/logout', (req, res) => {
 if (req.session.logged_in) {
