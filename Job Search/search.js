@@ -1,5 +1,27 @@
+const formSearch = document.getElementById("form1");
+formSearch.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const response = await fetch("api", {
+    method: "POST",
+    body: JSON.stringify({
+      title: document.getElementById("jobSearch").value,
+    }),
+    body: {
+      "Content-Type": "applucation/json",
+    },
+  });
+  if (response.ok) {
+    const data = await response.json();
+    document.write(JSON.stringify(data));
+  } else {
+    alert("fail");
+  }
+});
+
 var jobSearch = document.getElementById("jobSearch");
 var areaSearch = document.getElementById("area");
+
 const options = {
   method: "POST",
   headers: {
