@@ -15,22 +15,47 @@ var btn = document.getElementById("btn1");
 function jobs() {
   fetch("https://linkedin-jobs-search.p.rapidapi.com/", options)
     .then((response) => response.json())
-    .then((response) => console.log(response))
+    .then((response) => {
+      console.log(response);
+      for (let i = 0; i < response.length; i++) {
+        var jobTitle = document.createElement("h2");
+        var jobDescription = document.createElement("p");
+        //jobTitle.setAttribute("class", "");
+        //jobDescription.setAttribute("class", "");
+        jobTitle.textContent = response[i].job_title;
+        jobDescription.textContent = response[i].job_url;
+        div.appendChild(jobTitle);
+        div.appendChild(jobDescription);
+      }
+    })
     .catch((err) => console.error(err));
-  var jobTitle = document.createElement("h2");
-  var jobDescription = document.createElement("p");
-  //jobTitle.setAttribute("class", "");
-  //jobDescription.setAttribute("class", "");
-  //jobTitle.textContent = jobtitle.content;
-  //jobDescription.textContent = data.content;
-  div.appendChild(jobTitle);
-  div.appendChild(jobDescription);
 }
 
-function formSubmit() {
-  document.getElementById("form1").addEventListener("click", function (event) {
-    event.preventDefault;
-    console.log(event.target);
-  });
-  // jobs();
+function formSubmit(event) {
+  event.preventDefault();
+  console.log(event.target);
+  jobs();
 }
+
+btn.addEventListener("click", formSubmit);
+
+// const search = document.querySelector('#form1')
+// search.addEventListener('submit', (event) => {
+//     event.preventDefault();
+
+//     const response = await fetch('api', {
+//         method: "POST",
+//         body: JSON.stringify({
+//             title: document.querySelector('#input').value
+//         }),
+//         headers: {
+//             'Content-Type': 'applucation/json'
+//         }
+//     });
+//     if (response.ok){
+//         const data = await response.json();
+//         document.write(JSON.stringify(data))
+//     }else{
+//         alert("fail");
+//     }
+// });
