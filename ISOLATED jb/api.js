@@ -20,9 +20,9 @@ function jobs() {
       for (let i = 0; i < response.length; i++) {
         var jobTitle = document.createElement("h2");
         var jobDescription = document.createElement("p");
-        //jobTitle.setAttribute("class", "color: red");
-        //jobDescription.setAttribute("class", "");
-        jobTitle.textContent = response[i].job_title;
+        //jobTitle.setAttribute("class", "red");
+        // jobDescription.setAttribute("class", "");
+        // jobTitle.textContent = response[i].job_title;
         jobDescription.textContent = response[i].job_url;
         div.appendChild(jobTitle);
         div.appendChild(jobDescription);

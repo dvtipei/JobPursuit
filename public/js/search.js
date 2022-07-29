@@ -1,5 +1,5 @@
 var div = document.getElementById("jobs");
-var btn = document.getElementById("btn1");
+var btn = document.getElementById("form1");
 
 function jobs() {
   var jobSearch = document.getElementById("jobSearch");
@@ -20,7 +20,7 @@ function jobs() {
       for (let i = 0; i < response.length; i++) {
         var jobTitle = document.createElement("h2");
         var jobDescription = document.createElement("p");
-        //jobTitle.setAttribute("class", "");
+        //jobTitle.setAttribute("class", "red");
         //jobDescription.setAttribute("class", "");
         jobTitle.textContent = response[i].job_title;
         jobDescription.textContent = response[i].job_url;
@@ -37,4 +37,4 @@ function formSubmit(event) {
   jobs();
 }
 
-btn.addEventListener("click", formSubmit);
+btn.addEventListener("submit", formSubmit);
