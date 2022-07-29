@@ -1,41 +1,19 @@
-const formSearch = document.getElementById("form1");
-formSearch.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const response = await fetch("api", {
-    method: "POST",
-    body: JSON.stringify({
-      title: document.getElementById("jobSearch").value,
-    }),
-    body: {
-      "Content-Type": "applucation/json",
-    },
-  });
-  if (response.ok) {
-    const data = await response.json();
-    document.write(JSON.stringify(data));
-  } else {
-    alert("fail");
-  }
-});
-
-var jobSearch = document.getElementById("jobSearch");
-var areaSearch = document.getElementById("area");
-
-const options = {
-  method: "POST",
-  headers: {
-    "content-type": "application/json",
-    "X-RapidAPI-Key": "ee4ba4d88emsh5f022dd384ca11cp1c3043jsn048617c942bf",
-    "X-RapidAPI-Host": "linkedin-jobs-search.p.rapidapi.com",
-  },
-  body: `{"search_terms":"${jobSearch.value}","location":"${area.value}","page":"1"}`,
-};
-
 var div = document.getElementById("jobs");
 var btn = document.getElementById("btn1");
+
 function jobs() {
-  fetch("https://linkedin-jobs-search.p.rapidapi.com/", options)
+  var jobSearch = document.getElementById("jobSearch");
+  var area = document.getElementById("area");
+
+  const options = {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: `{"search_terms":"${jobSearch.value}","location":"${area.value}","page":"1"}`,
+  };
+
+  fetch("/api/jobs/", options)
     .then((response) => response.json())
     .then((response) => {
       console.log(response);
