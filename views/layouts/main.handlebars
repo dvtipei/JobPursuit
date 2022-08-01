@@ -17,7 +17,7 @@
     A Job Tracking App
     </h2>
     <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
+    {{#if loggedIn}}
     <nav>
         <button class="btn" id="logout">logout</button>
     </nav>
@@ -32,7 +32,7 @@
     </footer>
 
     <!-- Only include the logout script if the user is logged in -->
-    {{#if logged_in}}
+    {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>
