@@ -1,5 +1,3 @@
-
-
 class DropZone {
     static createDropZone() {
         const range = document.createRange();

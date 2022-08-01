@@ -1,4 +1,4 @@
-
+var company = document.querySelector(".company");
 
 class Column {
 	constructor(id, title) {
@@ -23,7 +23,17 @@ class Column {
 		KanbanAPI.getItems(id).forEach(item => {
 			this.renderItem(item);
 		});
+
+		company.addEventListener("click", () => {
+			const newItem = KanbanAPI.insertItem(id, "");
+
+			this.renderItem(newItem);
+		});
 	}
+
+	
+
+	
 
 	static createRoot() {
 		const range = document.createRange();

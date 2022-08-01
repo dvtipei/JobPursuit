@@ -1,5 +1,4 @@
-
-
-new KanbanAPI(
+new Kanban(
 	document.querySelector(".kanban")
 );
+

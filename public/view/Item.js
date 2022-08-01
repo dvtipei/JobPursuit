@@ -1,5 +1,3 @@
-
-
 class Item {
 	constructor(id, content) {
 		const bottomDropZone = DropZone.createDropZone();

@@ -1,5 +1,3 @@
-
-
 class Kanban {
 	constructor(root) {
 		this.root = root;
