@@ -64,7 +64,13 @@ res.render('login');
 
 router.get('/home', async (req, res) => 
  
-    res.render('homepage')
+res.render('homepage', {
+  
+  // Pass the logged in flag to the template
+  logged_in: req.session.logged_in,
+
+}
  )
+)
  
 module.exports = router;
