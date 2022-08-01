@@ -12,6 +12,14 @@ const logout = async () => {
       alert(response.statusText);
     }
   };
+
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  };
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  };
   
   document.querySelector('#logout').addEventListener('click', logout);
   

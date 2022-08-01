@@ -4,7 +4,7 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-      const dbUserData = await User.create({
+      const userData = await User.create({
         email: req.body.email,
         password: req.body.password,
       });
@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
       req.session.save(() => {
         req.session.loggedIn = true;
   
-        res.status(200).json(dbUserData);
+        res.status(200).json(userData);
       });
     } catch (err) {
       console.log(err);
@@ -60,6 +60,7 @@ try {
 router.post('/logout', (req, res) => {
 if (req.session.logged_in) {
     // Remove the session variables
+
     req.session.destroy(() => {
     res.status(204).end();
     });
