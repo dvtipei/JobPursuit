@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pursuit</title>
     <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/KanBanBoard/css/main.css"
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -51,15 +52,32 @@
             <button type="button" class="btn cancel justify-items-center" onclick="closeForm()">Close</button>
         </form>
     </div>
+    <div class="kanban">
+		<!-- <div class="kanban__column">
+			<div class="kanban__column-title">Not Started</div>
+			<div class="kanban__items">
+				<div contenteditable class="kanban__item-input">Wash the dishes</div>
+				<div class="kanban__dropzone"></div>
+			</div>
+			<button class="kanban__add-item" type="button">+ Add</button>
+		</div> -->
+	</div>
 
     </main>
     <footer>
 
     </footer>
 
-    <!-- Only include the logout script if the user is logged in -->
+    <!-- Only include the script if the user is logged in -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    <script src="/KanBanBoard/js/api/KanBanAPI.js" ></script>
+    <script src="/KanBanBoard/js/view/DropZone.js" ></script>
+    <script src="/KanBanBoard/js/view/Item.js" ></script>
+    <script src="/KanBanBoard/js/view/Column.js" ></script>
+    <script src="/KanBanBoard/js/view/Kanban.js" ></script>
+    <script src="/KanBanBoard/js/main.js" ></script>
+    
     {{/if}}
 </body>
 

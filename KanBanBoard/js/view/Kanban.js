@@ -1,6 +1,6 @@
-import Column from "./Column.js";
 
-export default class Kanban {
+
+class Kanban {
 	constructor(root) {
 		this.root = root;
 

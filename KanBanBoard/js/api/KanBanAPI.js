@@ -1,4 +1,4 @@
-export default class KanbanAPI {
+class KanbanAPI {
 	static getItems(columnId) {
 		const column = read().find(column => column.id == columnId);
 
