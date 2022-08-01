@@ -21,13 +21,16 @@
     A Job Tracking App
     </h2>
     <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
+   
     <nav>
         
         <button type="button" class="btn cancel" onclick="openForm()">+ Add New Job</button>
         <button class="btn" id="logout">logout</button>
+
+        <button type="button" class="btn cancel" id="newSearch">Search for a Job</button>
+        
     </nav>
-    {{/if}}
+    
     </header>
     <main>
     {{{ body }}}
@@ -59,16 +62,18 @@
 
     </footer>
 
-    <!-- Only include the script if the user is logged in -->
-    {{#if logged_in}}
+    <!-- Only include the logout script if the user is logged in -->
+ 
     <script src="/js/logout.js"></script>
     <script src="/api-kanban/KanBanAPI.js"></script>
     <script src="/view/DropZone.js"></script>
     <script src="/view/Item.js"></script>
     <script src="/view/Column.js"></script>
     <script src="/view/Kanban.js"></script>
+    <script src="/js/findJob.js"></script>
     <script src="/js/main.js"></script>
-    {{/if}}
+    
+    
 </body>
 
 </html>
