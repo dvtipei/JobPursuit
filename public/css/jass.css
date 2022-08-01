@@ -36,6 +36,12 @@
     font-size: 2em;
     margin: 0.67em 0;
   }
+
+  .searchH1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
   
   /* Grouping content
      ========================================================================== */
@@ -1122,6 +1128,13 @@
   form .form-textarea {
     display: block;
   }
+
+  #form1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    }
   
   form select {
     -webkit-appearance: none;
@@ -1705,6 +1718,11 @@
     }
   }
 
+
+  #jobs{
+    color: cornflowerblue;
+  }
+
   .hide {
     display: none;
   }
@@ -1715,4 +1733,4 @@
     justify-content: center;
   }
 
- 
+
