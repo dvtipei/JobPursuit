@@ -6,10 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pursuit</title>
     <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        #wishlist,
+        #applied,
+        #interview,
+        #offer {
+            list-style-type: none;
+            margin: 0;
+            float: left;
+            margin-right: 10px;
+            background: #eee;
+            padding: 5px;
+            width: 143px;
+        }
+
+        #wishlist li,
+        #applied li,
+        #interview li,
+        #offer li {
+            margin: 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            width: 120px;
+        }
+    </style>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
     <header class="display-flex justify-space-between align-center p-2">
+
+        <h1>
+            Pursuit
+        </h1>
+        <h2>
+            A Job Tracking App
+        </h2>
+        <!-- Only display the logout button if the user is logged in -->
+        {{#if logged_in}}
+        <nav>
+            <button class="btn" id="logout">logout</button>
+        </nav>
+        {{/if}}
+    </header>
+    <main class="container container-fluid mt-5">
+        {{{ body }}}
+        <div>
+            <h2>Wishlist</h2>
+            <ul id="wishlist" class="droptrue">
+                <li class="ui-state-default">Can be dropped..</li>
+                <li class="ui-state-default">..on an empty list</li>
+                <li class="ui-state-default">Item 3</li>
+                <li class="ui-state-default">Item 4</li>
+                <li class="ui-state-default">Item 5</li>
+            </ul>
+        </div>    
+        <div>
+            <h2>Applied</h2>
+            <ul id="applied" class="droptrue">
+                <li class="ui-state-default">Can be dropped..</li>
+                <li class="ui-state-default">..on an empty list</li>
+                <li class="ui-state-default">Item 3</li>
+                <li class="ui-state-default">Item 4</li>
+                <li class="ui-state-default">Item 5</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Interview</h2>
+            <ul id="interview" class="droptrue">
+                <li class="ui-state-default">Can be dropped..</li>
+                <li class="ui-state-default">..on an empty list</li>
+                <li class="ui-state-default">Item 3</li>
+                <li class="ui-state-default">Item 4</li>
+                <li class="ui-state-default">Item 5</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Offer</h2>
+            <ul id="offer" class="droptrue">
+                <li class="ui-state-default">Can be dropped..</li>
+                <li class="ui-state-default">..on an empty list</li>
+                <li class="ui-state-default">Item 3</li>
+                <li class="ui-state-default">Item 4</li>
+                <li class="ui-state-default">Item 5</li>
+            </ul>
+        </div>
+
     <h1>
     Pursuit
     </h1>
@@ -19,16 +103,39 @@
     <!-- Only display the logout button if the user is logged in -->
     {{#if loggedIn}}
     <nav>
+        
+        <button type="button" class="btn cancel" onclick="openForm()">+ Add New Job</button>
         <button class="btn" id="logout">logout</button>
     </nav>
     {{/if}}
     </header>
-    <main class="container container-fluid mt-5">
+    <main>
     {{{ body }}}
+
+    <div class="form-popup hide flex" id="myForm">
+        <form action="/action_page.php" class="form-container flex">
+            <h1 class="text-center">Enter Job Information</h1>
+
+            <label for="company"><b>Company</b></label>
+            <input type="text" placeholder="Company Name" name="company" required>
+
+            <label for="jobTitle"><b>Job Title</b></label>
+            <input type="text" placeholder="Enter Job Title" name="jobTitle" required>
+
+            <label for="salary"><b>Salary</b></label>
+            <input type="text" placeholder="Salary if Known" name="salary">
+
+            <label for="date"><b>Date Applied</b></label>
+            <input type="text" placeholder="Date Applied" name="date" required>
+
+            <button type="submit" class="btn text-center">Submit</button>
+            <button type="button" class="btn cancel justify-items-center" onclick="closeForm()">Close</button>
+        </form>
+    </div>
 
     </main>
     <footer>
-    
+
     </footer>
 
     <!-- Only include the logout script if the user is logged in -->

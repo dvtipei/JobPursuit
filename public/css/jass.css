@@ -1173,6 +1173,7 @@
   
   .container.container-fluid {
     width: 92%;
+    display: flex;
   }
   
   /* FLEX CONTENT */
@@ -1703,4 +1704,15 @@
       align-content: center;
     }
   }
+
+  .hide {
+    display: none;
+  }
   
+  #myForm {
+    background-color: #1b89bc;
+    width: 100%;
+    justify-content: center;
+  }
+
+ 
