@@ -1703,4 +1703,15 @@
       align-content: center;
     }
   }
+
+  .hide {
+    display: none;
+  }
   
+  #myForm {
+    background-color: #1b89bc;
+    width: 100%;
+    justify-content: center;
+  }
+
+ 
