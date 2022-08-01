@@ -33,7 +33,7 @@
     {{{ body }}}
 
     <div class="form-popup hide flex" id="myForm">
-        <form action="/action_page.php" class="form-container flex">
+        <form class="form-container flex">
             <h1 class="text-center">Enter Job Information</h1>
 
             <label for="company"><b>Company</b></label>
@@ -48,17 +48,18 @@
             <label for="date"><b>Date Applied</b></label>
             <input type="text" placeholder="Date Applied" name="date" required>
 
-            <button type="submit" class="btn text-center">Submit</button>
+            <button class="company" type="submit" class="btn text-center" onclick="createRoot()">Submit</button>
             <button type="button" class="btn cancel justify-items-center" onclick="closeForm()">Close</button>
         </form>
     </div>
+  
 
     </main>
     <footer>
 
     </footer>
 
-    <!-- Only include the logout script if the user is logged in -->
+    <!-- Only include the script if the user is logged in -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     <script src="/api-kanban/KanBanAPI.js"></script>
