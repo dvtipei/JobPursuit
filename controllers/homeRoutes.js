@@ -9,10 +9,9 @@ router.get("/", withAuth, async (req, res) => {
     return;
   }
 
-  res.render("login");
-});
 
-router.get("/login", (req, res) => {
+router.get('/login', (req, res) => {
+
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
     res.redirect("/home");
@@ -24,5 +23,6 @@ router.get("/login", (req, res) => {
 
 router.get("/home", async (req, res) => res.render("homepage"));
 router.get("/search", async (req, res) => res.render("job_search"));
+
 
 module.exports = router;
