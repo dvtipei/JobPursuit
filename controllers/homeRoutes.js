@@ -22,7 +22,31 @@ router.get('/login', (req, res) => {
 });
 
 router.get("/home", async (req, res) => res.render("homepage"));
-router.get("/search", async (req, res) => res.render("job_search"));
 
 
-module.exports = router;
+
+
+
+router.get('/search', async (req, res) => 
+ 
+res.render('job_search', {
+  
+  // Pass the logged in flag to the template
+  logged_in: req.session.logged_in,
+
+}
+ )
+)
+
+router.get('/home', async (req, res) => 
+ 
+res.render('homepage', {
+  
+  // Pass the logged in flag to the template
+  logged_in: req.session.logged_in,
+
+}
+ )
+)
+ 
+module.exports = router
