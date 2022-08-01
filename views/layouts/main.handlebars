@@ -34,7 +34,7 @@
     </header>
     <main>
     {{{ body }}}
-
+    
     <div class="form-popup hide flex" id="myForm">
         <form class="form-container flex">
             <h1 class="text-center">Enter Job Information</h1>
@@ -63,7 +63,7 @@
     </footer>
 
     <!-- Only include the logout script if the user is logged in -->
- 
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
     <script src="/api-kanban/KanBanAPI.js"></script>
     <script src="/view/DropZone.js"></script>
@@ -72,7 +72,7 @@
     <script src="/view/Kanban.js"></script>
     <script src="/js/findJob.js"></script>
     <script src="/js/main.js"></script>
-    
+    {{/if}}
     
 </body>
 
