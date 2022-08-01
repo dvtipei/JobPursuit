@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pursuit</title>
     <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/css-kanban/main.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
-        
+    <header class="display-flex justify-space-between align-center p-2">
     <h1>
     Pursuit
     </h1>
@@ -60,6 +61,12 @@
     <!-- Only include the logout script if the user is logged in -->
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
+    <script src="/api-kanban/KanBanAPI.js"></script>
+    <script src="/view/DropZone.js"></script>
+    <script src="/view/Item.js"></script>
+    <script src="/view/Column.js"></script>
+    <script src="/view/Kanban.js"></script>
+    <script src="/js/main.js"></script>
     {{/if}}
 </body>
 

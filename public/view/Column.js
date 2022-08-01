@@ -1,8 +1,4 @@
-import KanbanAPI from "../api/KanBanAPI.js";
-import DropZone from "./DropZone.js";
-import Item from "./Item.js";
-
-export default class Column {
+class Column {
 	constructor(id, title) {
 		const topDropZone = DropZone.createDropZone();
 
