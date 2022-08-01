@@ -9,7 +9,7 @@ checkPassword(loginPw) {
 }
 
 User.init(
-  {
+{
     id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -34,11 +34,11 @@ User.init(
 },
 {
     hooks: {
-        async beforeCreate(newUserData) {
-          newUserData.password = await bcrypt.hash(newUserData.password, 10);
-          return newUserData;
+        beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
         },
-      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
