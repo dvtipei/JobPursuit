@@ -8,6 +8,7 @@ router.get("/", withAuth, async (req, res) => {
     res.redirect("/home");
     return;
   }
+})
 
 
 router.get('/login', (req, res) => {
@@ -22,10 +23,21 @@ router.get('/login', (req, res) => {
 });
 
 router.get("/home", async (req, res) => res.render("homepage"));
-router.get("/search", async (req, res) => res.render("job_search"));
 
 
-<<<<<<< HEAD
+
+
+
+router.get('/search', async (req, res) => 
+ 
+res.render('job_search', {
+  
+  // Pass the logged in flag to the template
+  logged_in: req.session.logged_in,
+
+}
+ )
+)
 
 router.get('/home', async (req, res) => 
  
@@ -38,7 +50,4 @@ res.render('homepage', {
  )
 )
  
-module.exports = router;
-=======
-module.exports = router;
->>>>>>> a3b1c2937f9c460647c852354b0266dc956da926
+module.exports = router
