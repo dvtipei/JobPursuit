@@ -6,5 +6,5 @@ $( function() {
         }
     });
 
-    $( "#wishlist, #applied", "#interview", "offer" ).disableSelection();
+    $( "#wishlist, #applied", "#interview", "#offer" ).disableSelection();
 } );
