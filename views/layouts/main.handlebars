@@ -21,7 +21,7 @@
     A Job Tracking App
     </h2>
     <!-- Only display the logout button if the user is logged in -->
-   
+   {{#if logged_in}}
     <nav>
         
         <button type="button" class="btn cancel" onclick="openForm()">+ Add New Job</button>
@@ -30,7 +30,7 @@
         <button type="button" class="btn cancel" id="newSearch">Search for a Job</button>
         
     </nav>
-    
+    {{/if}}
     </header>
     <main>
     {{{ body }}}
