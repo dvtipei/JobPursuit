@@ -1,4 +1,4 @@
-var company = document.querySelector(".company");
+
 
 class Column {
 	constructor(id, title) {
@@ -24,11 +24,6 @@ class Column {
 			this.renderItem(item);
 		});
 
-		company.addEventListener("click", () => {
-			const newItem = KanbanAPI.insertItem(id, "");
-
-			this.renderItem(newItem);
-		});
 	}
 
 	

@@ -39,7 +39,7 @@
         <form class="form-container flex">
             <h1 class="text-center">Enter Job Information</h1>
 
-            <label for="company"><b>Company</b></label>
+            <label for="company"><b>Company</b></label> 
             <input type="text" placeholder="Company Name" name="company" required>
 
             <label for="jobTitle"><b>Job Title</b></label>
@@ -64,14 +64,14 @@
 
     <!-- Only include the logout script if the user is logged in -->
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    <script src="/api-kanban/KanBanAPI.js"></script>
-    <script src="/view/DropZone.js"></script>
-    <script src="/view/Item.js"></script>
-    <script src="/view/Column.js"></script>
-    <script src="/view/Kanban.js"></script>
-    <script src="/js/findJob.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/public/js/logout.js"></script>
+    <script src="/public/api-kanban/KanBanAPI.js"></script>
+    <script src="/public/view/DropZone.js"></script>
+    <script src="/public/view/Item.js"></script>
+    <script src="/public/view/Column.js"></script>
+    <script src="/public/view/Kanban.js"></script>
+    <script src="/public/js/findJob.js"></script>
+    <script src="/public/js/main.js"></script>
     {{/if}}
     
 </body>
