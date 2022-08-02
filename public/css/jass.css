@@ -1730,7 +1730,63 @@
   #myForm {
     background-color: #1b89bc;
     width: 100%;
-    justify-content: center;
+    margin-left: -33px;
   }
 
+  .login {
+    color: #065b83;
+    font-size: 40px;
+    margin-left: 10px;
+  }
 
+  .newAccount {
+    color: #065b83;
+    font-size: 40px;
+    margin-left: 10px;
+  }
+
+  .move {
+    margin-left: 10px;
+    width: 500px;
+  }
+
+  .loginPage {
+    background-image: url("https://cdn.pixabay.com/photo/2017/01/17/11/18/dairy-1986532_1280.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .pursuit {
+    font-size: 55px;
+    color: rgb(26, 26, 26);
+    margin-left: 10px;
+    margin-bottom: -10px;
+  }
+
+  .jobApp {
+    font-size: 25px;
+  }
+
+  .homePage {
+    background-color: #9db6d0;
+  }
+  .titleOne {
+    margin-left: 10px;
+  }
+
+  .kanban {
+    margin-left: 10px;
+  }
+
+  .nav {
+    margin-left: 10px;
+  }
+
+  .backHome {
+    background-color: #1b89bc;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+
+  .searchPage {
+    background-color: #9db6d0;
+  }

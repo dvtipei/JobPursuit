@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
       url: "https://linkedin-jobs-search.p.rapidapi.com/",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": `${process.env.API_KEY}`,
+        "X-RapidAPI-Key": `dc01470c37msh860345accc525e5p135c00jsna4a6ff9fcdc8`,
         "X-RapidAPI-Host": "linkedin-jobs-search.p.rapidapi.com",
       },
       data: `{"search_terms":"${req.body.search_terms}","location":"${req.body.location}","page":"1"}`,

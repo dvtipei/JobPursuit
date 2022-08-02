@@ -1,22 +1,34 @@
-<h2>Login</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<form class="form login-form">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pursuit</title>
+    <link rel="stylesheet" href="/css/jass.css">
+</head>
+
+<body class="loginPage">
+
+<h2 class="login">Login</h2>
+
+<form class="form login-form move">
     <div class="form-group">
-    <label for="email-login">email:</label>
+    <label for="email-login">Email:</label>
     <input class="form-input" type="text" id="email-login" />
     </div>
     <div class="form-group">
-    <label for="password-login">password:</label>
+    <label for="password-login">Password:</label>
     <input class="form-input" type="password" id="password-login" />
     </div>
     <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
+    <button class="btn btn-primary" type="submit">Login</button>
     </div>
 </form>
 
 <!-- still testing code not complete! -->
-    <h3>Create New Account</h3>
-<form class="form create-form">
+    <h3 class="newAccount">Create New Account</h3>
+<form class="form create-form move">
     <div class="form-group">
     <label for="email-create">Enter your email:</label>
     <input class="form-input" type="text" id="email-create" />
@@ -30,4 +42,7 @@
     </div>
 </form>
 
-<script src="/js/login.js"></script>
+
+<script src="./js/login.js"></script>
+{{{ body }}}
+</body>
