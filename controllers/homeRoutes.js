@@ -28,7 +28,7 @@ router.get("/home", async (req, res) => res.render("homepage"));
 
 
 
-router.get('/search', async (req, res) => 
+router.get('/search-for-job', async (req, res) => 
  
 res.render('job_search', {
   
